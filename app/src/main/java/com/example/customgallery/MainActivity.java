@@ -40,8 +40,8 @@ public class MainActivity extends BaseActivity {
         switch (requestCode) {
             case REQ_GALLERY:
                 if (resultCode == RESULT_OK) {
-                    String datadata = data.getStringExtra("imagePath");
-                    Uri imageUri = Uri.parse(datadata);
+                    //String datadata = data.getStringExtra("imagePath");
+                    Uri imageUri = data.getParcelableExtra("imagePath");
                     imageView.setImageURI(imageUri);
                 }
                 break;
